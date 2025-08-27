@@ -1,0 +1,138 @@
+{
+    "Cabelo": {
+        "Linha profissional": [
+            {
+                "nome": "Shampoo Repair Pro",
+                "preco_medio": "R$45,00",
+                "descricao": "Shampoo para reparação intensa",
+                "foto_link": "https://exemplo.com/foto1.jpg"
+            }
+        ],
+        "Linha varejo": [
+            {
+                "nome": "Máscara Nutritiva",
+                "preco_medio": "R$35,00",
+                "descricao": "Máscara nutritiva para cabelos ressecados",
+                "foto_link": "https://exemplo.com/foto2.jpg"
+            }
+        ],
+        "Inspirados em perfumaria": [
+            {
+                "nome": "Leave-in inspirado Coco Chanel",
+                "preco_medio": "R$55,00",
+                "descricao": "Leave-in com fragrância inspirada",
+                "foto_link": "https://exemplo.com/foto3.jpg"
+            }
+        ],
+        "Criações": [
+            {
+                "nome": "Sérum Brilho Total",
+                "preco_medio": "R$60,00",
+                "descricao": "Sérum para brilho e proteção térmica",
+                "foto_link": "https://exemplo.com/foto4.jpg"
+            }
+        ]
+    },
+    "Aromatizante": {
+        "Lojas famosas": [
+            {
+                "nome": "Difusor Loja X",
+                "preco_medio": "R$80,00",
+                "descricao": "Difusor de ambiente inspirado em lojas de luxo",
+                "foto_link": "https://exemplo.com/foto5.jpg"
+            }
+        ],
+        "Fragrâncias famosas": [
+            {
+                "nome": "Spray inspirado Dior Home",
+                "preco_medio": "R$75,00",
+                "descricao": "Spray ambiente com notas Dior Home",
+                "foto_link": "https://exemplo.com/foto6.jpg"
+            }
+        ],
+        "Criações": [
+            {
+                "nome": "Aroma exclusivo Lavanda & Baunilha",
+                "preco_medio": "R$85,00",
+                "descricao": "Aroma exclusivo lavanda e baunilha",
+                "foto_link": "https://exemplo.com/foto7.jpg"
+            }
+        ],
+        "Hidrossolúveis": [
+            {
+                "nome": "Odorizante Máquina Citrus",
+                "preco_medio": "R$70,00",
+                "descricao": "Odorizante hidrossolúvel para máquinas",
+                "foto_link": "https://exemplo.com/foto8.jpg"
+            }
+        ]
+    },
+    "Perfume": {
+        "Nacionais": [
+            {
+                "nome": "Eau de Parfum Brasil",
+                "preco_medio": "R$150,00",
+                "descricao": "Perfume nacional com notas cítricas",
+                "foto_link": "https://exemplo.com/foto9.jpg"
+            }
+        ],
+        "Internacionais": [
+            {
+                "nome": "Colônia Internacional Paris",
+                "preco_medio": "R$250,00",
+                "descricao": "Perfume importado floral",
+                "foto_link": "https://exemplo.com/foto10.jpg"
+            }
+        ],
+        "Nicho": [
+            {
+                "nome": "Perfume Nicho Noir",
+                "preco_medio": "R$400,00",
+                "descricao": "Perfume nicho com notas amadeiradas",
+                "foto_link": "https://exemplo.com/foto11.jpg"
+            }
+        ],
+        "Árabes": [
+            {
+                "nome": "Attar Árabe Oud",
+                "preco_medio": "R$300,00",
+                "descricao": "Perfume árabe com oud intenso",
+                "foto_link": "https://exemplo.com/foto12.jpg"
+            }
+        ],
+        "Ranking": [
+            {
+                "nome": "Top 10 Bestseller",
+                "preco_medio": "R$200,00",
+                "descricao": "Ranking de perfumes mais vendidos",
+                "foto_link": "https://exemplo.com/foto13.jpg"
+            }
+        ],
+        "Novidades": [
+            {
+                "nome": "Lançamento Floral Fresh",
+                "preco_medio": "R$220,00",
+                "descricao": "Novidade floral lançamento 2025",
+                "foto_link": "https://exemplo.com/foto14.jpg"
+            }
+        ]
+    },
+    "Body Splash": {
+        "Criações": [
+            {
+                "nome": "Body Splash Oceano",
+                "preco_medio": "R$50,00",
+                "descricao": "Body splash oceânico refrescante",
+                "foto_link": "https://exemplo.com/foto15.jpg"
+            }
+        ],
+        "Famosos": [
+            {
+                "nome": "Body Splash Tropical",
+                "preco_medio": "R$55,00",
+                "descricao": "Body splash tropical com notas frutadas",
+                "foto_link": "https://exemplo.com/foto16.jpg"
+            }
+        ]
+    }
+}
