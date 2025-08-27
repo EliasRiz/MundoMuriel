@@ -1,1 +1,81 @@
+name: Atualização Automática do Catálogo
+
+on:
+  # Roda a cada 6 horas. Você pode ajustar usando a sintaxe cron.
+  # Para rodar a cada hora: '0 * * * *'
+  # Para rodar uma vez por dia: '0 0 * * *'
+  schedule:
+    - cron: '0 */6 * * *'
+  # Permite que você rode este workflow manualmente pela aba Actions no GitHub
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: 2. Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 3. Instalar dependências Python
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: 4. Executar script para gerar JSON
+        run: |
+          # O script Python que criamos anteriormente, agora dentro do workflow
+          python -c '''
+import pandas as pd
+import json
+
+# URL pública da sua planilha para exportação em CSV
+url = "https://docs.google.com/spreadsheets/d/1aQnRODvzhlj9NtO5aUAiiX6nIl9T9AX50Rf2a3nomxU/export?format=csv"
+df = pd.read_csv(url )
+
+catalog_data = {}
+
+for index, row in df.iterrows():
+    categoria = row["Categoria"]
+    subcategoria = row["Subcategoria"]
+    nome_produto = row["Nome do Produto"]
+    preco_medio = row["Preço médio"]
+    descricao = row["Descrição"]
+    foto_link = row["Foto (link)"]
+
+    if categoria not in catalog_data:
+        catalog_data[categoria] = {}
+
+    if subcategoria not in catalog_data[categoria]:
+        catalog_data[categoria][subcategoria] = []
+
+    catalog_data[categoria][subcategoria].append({
+        "nome": nome_produto,
+        "preco_medio": preco_medio,
+        "descricao": descricao,
+        "foto_link": foto_link
+    })
+
+# Caminho onde o arquivo JSON deve ser salvo no seu projeto React
+output_path = "src/assets/catalog_data.json"
+
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(catalog_data, f, ensure_ascii=False, indent=4)
+
+print(f"Dados do catálogo salvos em {output_path}")
+'''
+
+      - name: 5. Fazer commit e push das alterações
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add src/assets/catalog_data.json
+          # O comando a seguir verifica se há algo para commitar. Se não houver, ele não faz nada.
+          git diff --staged --quiet || git commit -m "Atualização automática dos dados do catálogo"
+          git push
 
